@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisão de Conta</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+
+    <h1>Inserir Pedidos Individuais</h1>
+
+    <form id="pedidoIndividualForm">
+        <label for="nome">Nome :</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="valorPedido">Valor do Pedido:</label>
+        <input type="number" id="valorPedido" name="valorPedido" step="0.01" required>
+
+        <button type="button" onclick="adicionarPedidoIndividual()">Adicionar</button>
+    </form>
+
+    
+    <h1>Lista de Amigos</h1>
+
+    <div id="listaAmigos">
+        <ul id="listaDados"></ul>
+        <button id = "Limpar" type="button" onclick="limparListaAmigos()">Limpar Lista de Amigos</button>
+    </div>
+    
+
+
+    <h1>Taxas e Descontos</h1>
+
+    <form id="calcularContaForm">
+
+        <label for="entrega">Taxa de Entrega:</label>
+        <input type="number" id="entrega" name="entrega" step="0.01">
+
+        <label for="desconto">Desconto:</label>
+        <input type="number" id="desconto" name="desconto" step="0.01">
+
+        <label for="acrescimopercentual">Acréscimo:</label>
+        <input type="number" id="acrescimopercentual" name="acrescimopercentual" step="0.01">
+
+        <button type="button" onclick="calcularConta()">Calcular Conta</button>
+    </form>
+
+    <h1>Valor que cada um deve pagar</h1>
+
+    <div id="resultadoContainer">
+        <ul id="resultado"></ul>
+        <button type="button" id="btnEnviarLinkPagamento" onclick="enviarLinkPagamento()" style="display: none;">Enviar Link de Pagamento</button>
+    </div>
+
+    <script src="js/CalculaValorPorAmigo.js"></script>
+
+    <script src="js/AdicionaValores.js"></script>
+
+</body>
+</html>
